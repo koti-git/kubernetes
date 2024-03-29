@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: loadbalancing-service
+  labels: 
+    app: myapp
+spec:
+  type: loadBalance
+  selector:
+    app: myapp
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+ 
