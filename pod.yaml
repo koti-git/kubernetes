@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-service
+spec:
+  container:
+  - name: webserver
+    image: tomcat
+    ports:
+    - containerPort: 80
